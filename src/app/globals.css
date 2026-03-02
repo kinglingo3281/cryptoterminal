@@ -1,0 +1,392 @@
+@import "tailwindcss";
+
+
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #fcfcfc;
+  --foreground: #171717;
+  --card: #fcfcfc;
+  --card-foreground: #171717;
+  --popover: #fcfcfc;
+  --popover-foreground: #525252;
+  --primary: #00bf63;
+  --primary-foreground: #1e2723;
+  --secondary: #fdfdfd;
+  --secondary-foreground: #171717;
+  --muted: #ededed;
+  --muted-foreground: #202020;
+  --accent: #ededed;
+  --accent-foreground: #202020;
+  --destructive: #ca3214;
+  --destructive-foreground: #fffcfc;
+  --border: #dfdfdf;
+  --input: #f6f6f6;
+  --ring: #72e3ad;
+  --chart-1: #72e3ad;
+  --chart-2: #3b82f6;
+  --chart-3: #8b5cf6;
+  --chart-4: #f59e0b;
+  --chart-5: #10b981;
+  --sidebar: #fcfcfc;
+  --sidebar-foreground: #707070;
+  --sidebar-primary: #72e3ad;
+  --sidebar-primary-foreground: #1e2723;
+  --sidebar-accent: #ededed;
+  --sidebar-accent-foreground: #202020;
+  --sidebar-border: #dfdfdf;
+  --sidebar-ring: #72e3ad;
+  --font-sans: Outfit, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: monospace;
+  --radius: 0.5rem;
+  --shadow-x: 0px;
+  --shadow-y: 1px;
+  --shadow-blur: 3px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.17;
+  --shadow-color: #000000;
+  --shadow-2xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);
+  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);
+  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 2px 4px -1px hsl(0 0% 0% / 0.17);
+  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 4px 6px -1px hsl(0 0% 0% / 0.17);
+  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 8px 10px -1px hsl(0 0% 0% / 0.17);
+  --shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.43);
+  --tracking-normal: 0.025em;
+  --spacing: 0.25rem;
+}
+
+@layer utilities {
+  .btn-layered {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .btn-layered:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-layered-grey {
+    position: relative;
+    background-color: #1E1F22;
+    color: var(--foreground);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    cursor: pointer;
+  }
+
+  .btn-layered-grey:hover {
+    color: var(--foreground);
+    background-color: #27282b;
+  }
+
+  .btn-layered-grey:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Chart UI Components */
+  .chart-button {
+    position: relative;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--chart-text-secondary);
+    border: 1px solid transparent;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  .chart-button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--chart-text-primary);
+  }
+
+  .chart-button-active {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border-color: var(--primary);
+  }
+
+  .chart-button-active:hover {
+    background-color: var(--primary);
+    opacity: 0.9;
+  }
+}
+
+
+.dark {
+  --background: #0E0F11;
+  --foreground: #FAFAFA;
+  --card: #0E0F11;
+  --card-foreground: #FAFAFA;
+  --popover: #0E0F11;
+  --popover-foreground: #FAFAFA;
+  --primary: #2DBD85;
+  --primary-foreground: #FFFFFF;
+  --secondary: #1E1F22;
+  --secondary-foreground: #FAFAFA;
+  --muted: #1E1F22;
+  --muted-foreground: #888888;
+  --accent: #1E1F22;
+  --accent-foreground: #FAFAFA;
+  --destructive: #E05252;
+  --destructive-foreground: #FFFFFF;
+  --border: #1E1F22;
+  --input: #1E1F22;
+  --ring: #2DBD85;
+  --chart-1: #2DBD85;
+  --chart-2: #3b82f6;
+  --chart-3: #a78bfa;
+  --chart-4: #fbbf24;
+  --chart-5: #10b981;
+  --sidebar: #0E0F11;
+  --sidebar-foreground: #888888;
+  --sidebar-primary: #2DBD85;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #1E1F22;
+  --sidebar-accent-foreground: #FAFAFA;
+  --sidebar-border: #1E1F22;
+  --sidebar-ring: #2DBD85;
+
+  --trade-green: #2DBD85;
+  --trade-red: #E05252;
+  --trade-orange: #2DBD85;
+  --warning: #eab308;
+  --success: #22c55e;
+  
+  /* Chart-specific variables */
+  --chart-bg: #131722;
+  --chart-panel-bg: #1E222D;
+  --chart-grid: rgba(42, 46, 57, 0.4);
+  --chart-text-primary: #D1D4DC;
+  --chart-text-secondary: #787B86;
+  --chart-text-tertiary: #434651;
+  --chart-border: rgba(42, 46, 57, 1);
+  --chart-border-subtle: rgba(42, 46, 57, 0.5);
+  
+  /* Terminal/Console */
+  --terminal-bg: #0d1117;
+  --terminal-header: #161b22;
+  --terminal-border: #30363d;
+  --terminal-border-dim: #21262d;
+  --terminal-text: #c9d1d9;
+  --terminal-text-muted: #8b949e;
+  --terminal-text-dim: #6e7681;
+  --terminal-success: #7ee787;
+  --terminal-warning: #d29922;
+  --terminal-error: #f85149;
+  --terminal-info: #58a6ff;
+  --terminal-purple: #a371f7;
+  
+  --font-sans: Outfit, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: 'SF Mono', 'Roboto Mono', 'Consolas', 'Monaco', monospace;
+  --radius: 0.5rem;
+  --shadow-x: 0px;
+  --shadow-y: 1px;
+  --shadow-blur: 3px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.17;
+  --shadow-color: #000000;
+  --shadow-2xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);
+  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);
+  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 2px 4px -1px hsl(0 0% 0% / 0.17);
+  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 4px 6px -1px hsl(0 0% 0% / 0.17);
+  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 8px 10px -1px hsl(0 0% 0% / 0.17);
+  --shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.43);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-trade-green: var(--trade-green);
+  --color-trade-red: var(--trade-red);
+  --color-trade-orange: var(--trade-orange);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-chart-bg: var(--chart-bg);
+  --color-chart-panel-bg: var(--chart-panel-bg);
+  --color-chart-grid: var(--chart-grid);
+  --color-chart-text-primary: var(--chart-text-primary);
+  --color-chart-text-secondary: var(--chart-text-secondary);
+  --color-chart-text-tertiary: var(--chart-text-tertiary);
+  --color-chart-border: var(--chart-border);
+  --color-chart-border-subtle: var(--chart-border-subtle);
+  --color-terminal-bg: var(--terminal-bg);
+  --color-terminal-header: var(--terminal-header);
+  --color-terminal-border: var(--terminal-border);
+  --color-terminal-border-dim: var(--terminal-border-dim);
+  --color-terminal-text: var(--terminal-text);
+  --color-terminal-text-muted: var(--terminal-text-muted);
+  --color-terminal-text-dim: var(--terminal-text-dim);
+  --color-terminal-success: var(--terminal-success);
+  --color-terminal-warning: var(--terminal-warning);
+  --color-terminal-error: var(--terminal-error);
+  --color-terminal-info: var(--terminal-info);
+  --color-terminal-purple: var(--terminal-purple);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-normal: var(--tracking-normal);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+}
+
+/* Reset Tailwind v4 preflight default border on form elements */
+/* Placed in @layer base so utility classes (e.g. border border-border) can override */
+@layer base {
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea,
+  select {
+    border: 0 solid transparent;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  letter-spacing: var(--tracking-normal);
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) var(--background);
+}
+
+/* Pointer cursor on all clickable elements */
+button,
+[role="button"],
+a,
+[onclick],
+.cursor-pointer,
+.btn-layered,
+.btn-layered-grey {
+  cursor: pointer !important;
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Disable click on chart symbol label - display only */
+.klinecharts-pro-period-bar .symbol {
+  pointer-events: none;
+  cursor: default !important;
+}
+
+/* Chase Order Animations */
+@keyframes chase-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes chase-scan {
+  0% {
+    transform: translateX(-120%) rotate(16deg);
+  }
+  100% {
+    transform: translateX(120%) rotate(16deg);
+  }
+}
+
+.animate-chase-pulse {
+  animation: chase-pulse 2s ease-in-out infinite;
+}
+
+.animate-chase-scan {
+  animation: chase-scan 1200ms linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-chase-pulse,
+  .animate-chase-scan {
+    animation: none !important;
+  }
+}

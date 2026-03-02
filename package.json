@@ -1,0 +1,58 @@
+{
+  "name": "trading-terminal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@klinecharts/pro": "^0.1.1",
+    "@nktkas/hyperliquid": "^0.30.2",
+    "@privy-io/react-auth": "^1.99.1",
+    "@supabase/supabase-js": "^2.90.1",
+    "axios": "^1.13.2",
+    "clsx": "^2.1.1",
+    "crypto-js": "^4.2.0",
+    "ethers": "^6.16.0",
+    "framer-motion": "^12.26.2",
+    "klinecharts": "^9.5.4",
+    "lightweight-charts": "^5.1.0",
+    "lucide-react": "^0.562.0",
+    "next": "^16.1.6",
+    "pako": "^2.1.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-resizable-panels": "^2.0.19",
+    "react-ts-tradingview-widgets": "^1.2.8",
+    "sonner": "^2.0.7",
+    "supabase": "^2.74.4",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "viem": "^2.43.5",
+    "zustand": "^4.5.7"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "latest",
+    "wrangler": "latest",
+    "@tailwindcss/postcss": "^4",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^20",
+    "@types/pako": "^2.0.3",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "lightningcss": "^1.29.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "react-resizable-panels": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  }
+}
