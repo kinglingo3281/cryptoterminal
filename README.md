@@ -1,5 +1,7 @@
 # AutoTrade Trading Terminal
 
+[![CI](https://github.com/kinglingo3281/cryptoterminal/actions/workflows/ci.yml/badge.svg)](https://github.com/kinglingo3281/cryptoterminal/actions/workflows/ci.yml)
+
 A full browser-based trading workstation built to unify authenticated user accounts, wallet and exchange connectivity, live market and portfolio state, advanced charting, analytical signals, order and position management, risk controls, and automated execution within a configurable professional interface.
 
 ## Ownership
