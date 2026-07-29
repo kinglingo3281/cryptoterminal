@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@klinecharts/pro": "^0.1.1",
@@ -36,7 +39,6 @@
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "latest",
-    "wrangler": "latest",
     "@tailwindcss/postcss": "^4",
     "@types/crypto-js": "^4.2.2",
     "@types/node": "^20",
@@ -47,7 +49,9 @@
     "eslint-config-next": "16.1.1",
     "lightningcss": "^1.29.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.10",
+    "wrangler": "latest"
   },
   "overrides": {
     "react-resizable-panels": {
