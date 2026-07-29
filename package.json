@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@klinecharts/pro": "^0.1.1",
-    "@nktkas/hyperliquid": "^0.30.2",
+    "@nktkas/hyperliquid": "^0.33.2",
     "@privy-io/react-auth": "^1.99.1",
     "@supabase/supabase-js": "^2.90.1",
     "axios": "^1.13.2",
