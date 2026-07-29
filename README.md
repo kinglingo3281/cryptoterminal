@@ -115,14 +115,31 @@ The terminal became the primary user-facing workstation for bringing those syste
 
 ## Screenshots
 
-Add sanitized images at these paths:
+Sanitized captures from a running instance (no real accounts, balances, wallet addresses, or private data).
 
-- `docs/images/workspace-overview.png`
-- `docs/images/market-analysis.png`
-- `docs/images/orders-and-positions.png`
-- `docs/images/automation-and-risk.png`
+### Workspace overview
 
-For every screenshot, remove names, wallet addresses, balances, private endpoints, account IDs, user data, and proprietary signals.
+Configurable multi-panel layout: live chart with indicators, order book, order-entry panel, and the real-time analytical signal feed.
+
+![Workspace overview](docs/images/workspace-overview.png)
+
+### Orders and positions
+
+Market/limit order entry, leverage and risk fields, order book depth, and the positions/balances/orders workspace.
+
+![Orders and positions](docs/images/orders-and-positions.png)
+
+### Automation and risk
+
+Automation center for the signal, cancel, stop-loss/take-profit, trailing-stop, and market-making workflows, with activity logging.
+
+![Automation and risk](docs/images/automation-and-risk.png)
+
+### Authentication
+
+Wallet and email authentication via Privy.
+
+![Authentication](docs/images/login.png)
 
 ## Security and omitted material
 
